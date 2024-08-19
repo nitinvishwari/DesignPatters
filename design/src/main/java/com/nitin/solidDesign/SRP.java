@@ -1,4 +1,4 @@
-package com.nitin.design;
+package com.nitin.solidDesign;
 
 import java.io.*;
 import java.net.URL;

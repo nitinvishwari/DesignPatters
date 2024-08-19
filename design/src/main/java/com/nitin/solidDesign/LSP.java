@@ -1,4 +1,4 @@
-package com.nitin.design;
+package com.nitin.solidDesign;
 
 class Rectangle
 {
