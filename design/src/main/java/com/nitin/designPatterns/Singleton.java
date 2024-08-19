@@ -21,5 +21,9 @@ public class Singleton {
 		birdObject.name = "parrot";
 		birdObject.weight = (float) 2.5;
 		System.out.println(birdObject.name + ", " + birdObject.weight + "pounds");
+		
+		// this instance is same as above and even variable values are also same.
+		Bird birdObject2 = Bird.getInstance();
+		System.out.println(birdObject2.name + ", " + birdObject2.weight + "kgs");
 	}
 }
