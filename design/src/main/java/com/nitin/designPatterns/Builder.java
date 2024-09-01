@@ -51,6 +51,7 @@ public class Builder {
 //		FlyingBird bird = new FlyingBird(2, 3.4, "Parrot");
 //		System.out.println(bird.toString());
 		FlyingBirdBuilder fbb = new FlyingBirdBuilder().setName("Parrot").setWings(2);
-		System.out.println(fbb.getInstance().toString());
+		// By default toString method is called in println
+		System.out.println(fbb.getInstance());
 	}
 }
