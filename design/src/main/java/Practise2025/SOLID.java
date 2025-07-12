@@ -36,7 +36,54 @@ class Box{
 }
 
 
+// Dependency Inversion Principle
+// High Level Modules should not depend on Low level module both should use abstraction
+// Do dependency Injection
+
+interface PrintMethod{
+	void print();
+}
+
+class DotPrinting implements PrintMethod{
+	@Override
+	public void print() {
+		System.out.println("dot printing");
+	}
+}
+
+class ColorPrinting implements PrintMethod{
+	@Override
+	public void print() {
+		System.out.println("color printing");
+	}
+}
+
+class Printer {
+	
+	PrintMethod printMethod;
+	
+	public Printer(PrintMethod printMethod) {
+		this.printMethod = printMethod;
+	}
+	
+	public void printing() {
+		printMethod.print();
+	}
+}
+
+class DIP{
+	public static void main(String[] args) {
+		Printer printer = new Printer(new DotPrinting());
+		printer.printing();
+	}
+}
+
+
+
+
+
 // Interface segregation principle
+// Clients should not be forced to depend on interfaces they do not use.
 interface print{
 	void printTheValue();
 }
