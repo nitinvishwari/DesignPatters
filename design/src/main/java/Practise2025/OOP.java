@@ -11,6 +11,7 @@ public class OOP {
  */
 
 abstract class WildAnimal{
+	String wildAnimalVariable = "Lion";
 	String warningMessage() {
 		return "Please be aware!";
 	}
@@ -24,7 +25,17 @@ class Lion extends WildAnimal{
 	
 	@Override
 	void setName(String name) {
+		wildAnimalVariable = "king";
+		if(wildAnimalVariable.equals("Lion")) {
+			this.name = "Bagira";
+			return;
+		}
 		this.name = name;
+	}
+	
+	@Override
+	String warningMessage() {
+		return "Changed warning message";
 	}
 	
 	@Override
@@ -36,10 +47,10 @@ class Lion extends WildAnimal{
 class AbstractClassTest{
 	
 	public static void main(String[] args) {
-		Lion lion = new Lion();
-		lion.setName("Bagira");
-		System.out.println(lion.warningMessage());
-		System.out.println(lion.getName());
+		WildAnimal lion1 = new Lion();
+		WildAnimal lion2 = new Lion();
+		lion1.wildAnimalVariable = "lion1";
+		System.out.println(lion2.wildAnimalVariable);
 	}
 }
 
