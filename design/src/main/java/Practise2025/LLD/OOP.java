@@ -1,4 +1,4 @@
-package Practise2025;
+package Practise2025.LLD;
 
 public class OOP {
 	public static void main(String[] args) {
