@@ -6,6 +6,44 @@ public class OOP {
 	}
 }
 
+/*
+ * Abstract Classes for abstraction
+ */
+
+abstract class WildAnimal{
+	String warningMessage() {
+		return "Please be aware!";
+	}
+	abstract void setName(String name);
+	abstract String getName();
+}
+
+class Lion extends WildAnimal{
+	
+	private String name;
+	
+	@Override
+	void setName(String name) {
+		this.name = name;
+	}
+	
+	@Override
+	String getName() {
+		return name;
+	}
+}
+
+class AbstractClassTest{
+	
+	public static void main(String[] args) {
+		Lion lion = new Lion();
+		lion.setName("Bagira");
+		System.out.println(lion.warningMessage());
+		System.out.println(lion.getName());
+	}
+}
+
+
 /* Abstraction */
 
 interface Bird2{
