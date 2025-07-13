@@ -11,7 +11,7 @@ public class OOP {
  */
 
 abstract class WildAnimal{
-	String wildAnimalVariable = "Lion";
+	String wildAnimalVariable = "Lion"; // this is instance variable and not static (this thing is different from interface)
 	String warningMessage() {
 		return "Please be aware!";
 	}
@@ -58,6 +58,7 @@ class AbstractClassTest{
 /* Abstraction */
 
 interface Bird2{
+	String birdCategory = "Bird Catergory"; // Even if I am not writing public static but it's public static
 	String description();
 	boolean isFly();
 }
@@ -74,8 +75,9 @@ class Penguin implements Bird2{
 
 class AbstractionTest{
 	public static void main(String[] args) {
-		Penguin penguin = new Penguin();
+		Bird2 penguin = new Penguin();
 		System.out.println(penguin.description());
+		System.out.println(Bird2.birdCategory);
 	}
 }
 
