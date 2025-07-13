@@ -6,6 +6,30 @@ public class OOP {
 	}
 }
 
+/* Abstraction */
+
+interface Bird2{
+	String description();
+	boolean isFly();
+}
+
+// This implementation need not be important for user to understand.
+class Penguin implements Bird2{
+	public String description() {
+		return "Penguin lives in cold places.";
+	}
+	public boolean isFly() {
+		return false;
+	}
+}
+
+class AbstractionTest{
+	public static void main(String[] args) {
+		Penguin penguin = new Penguin();
+		System.out.println(penguin.description());
+	}
+}
+
 // Encapsulation
 class Person{
 	
