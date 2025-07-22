@@ -1,7 +1,13 @@
 package Practise2025.LLD.TicTacToe;
 
 public class Game {
-
+	public static void main(String[] args) {
+		Board board = new Board(3);
+		Piece cross = new Piece(PieceType.Cross);
+		
+		Player p1 = new Player(cross, "Nitin");
+		Player p2 = new Player(cross, "Chinni");
+	}
 }
 
 
