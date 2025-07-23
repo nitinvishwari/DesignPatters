@@ -6,7 +6,7 @@ public class Board {
 	
 	public Board(int size) {
 		this.size = size;
-		board = new PieceType[3][3];
+		board = new PieceType[size][size];
 	}
 	
 	public boolean setPiece(int row, int col, PieceType pieceType) {

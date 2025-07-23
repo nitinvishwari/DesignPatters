@@ -16,6 +16,4 @@ public class Player {
 		this.piece = piece;
 		this.playerName = name;
 	}
-
-	
 }
