@@ -6,13 +6,27 @@ public class ThreadCreation {
 	public static void main(String[] args) {
 		Thread currentThread = Thread.currentThread();
 		currentThread.setName("MainGuy");
-		currentThread.setPriority(Thread.MAX_PRIORITY);
 		printThreadState(currentThread);
 		
 		MyThread myThread = new MyThread();
 		myThread.start();
 		
-//		Runnable myRunnable = () ->
+		Runnable myRunnable = () -> {
+			for(int i=0; i<10; i++) {
+				System.out.print(". ");
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					System.out.println("newThread interrupted");
+					Thread.currentThread().interrupt();
+					break;
+				}
+			}
+		};
+		
+		Thread newThread = new Thread(myRunnable);
+		newThread.start();
 		
 		for(int j=0; j<=4; j++) {
 			System.out.print("M ");
@@ -22,7 +36,15 @@ public class ThreadCreation {
 				e.printStackTrace();
 			}
 		} 
+		newThread.interrupt();
 		
+		try {
+			Thread.sleep(10);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(newThread.isInterrupted());
 	}
 	
 	public static void printThreadState(Thread thread) {
