@@ -31,7 +31,7 @@ public class SynchronizedTest {
 
 class Bank{
 	
-	private int amount;
+	private Integer amount;
 	
 	public Bank(int amount) {
 		this.amount = amount;
@@ -49,7 +49,7 @@ class Bank{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		synchronized(this) {
+		synchronized(this.amount) {
 			this.amount += depositAmount;	
 		}
 		System.out.println("deposited amount:" + depositAmount + ", total:" + amount);
@@ -63,7 +63,7 @@ class Bank{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		synchronized(this) {
+		synchronized(this.amount) {
 			if(withdrawAmount > this.amount) {
 				this.amount = 0;
 			}
