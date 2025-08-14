@@ -1,4 +1,4 @@
-package Practise2025.s.cellTable;
+package Practise2025.sigma;
 
 import java.util.*;
 
