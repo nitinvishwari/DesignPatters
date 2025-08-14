@@ -72,7 +72,7 @@ class SpreadSheet{
 			CellKey cellKey = new CellKey(row, col);
 			if(cellMap.containsKey(cellKey)) {
 				Cell cell = cellMap.get(cellKey);
-				System.out.println(cell.)
+//				System.out.println(cell.)
 			}
 		}
 	}
