@@ -1,4 +1,4 @@
-package Practise2025.sigma;
+package Practise2025.CompanyS;
 
 import java.util.*;
 
