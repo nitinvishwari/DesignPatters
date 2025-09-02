@@ -6,7 +6,7 @@ import java.util.stream.*;
 public class Streams {
 	
 	record Car(String name, String brand, int price) {}
-	
+
 	public static void main(String[] args) {
 		// Created list of Cars
 		List<Car> list = new ArrayList<>();
@@ -42,6 +42,8 @@ public class Streams {
 		// Sort based on the price
 		List<Car> sortedList = list.stream().sorted((a, b) -> a.price - b.price).toList();
 		System.out.println(sortedList);
+		
+		
 	}
 	
 }
