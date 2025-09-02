@@ -37,7 +37,7 @@ public class Stream {
 	}
 	
 	// Using streams, count the frequency of each word and return a Map<String, Long>
-	private static Map<String, Long> challenge5(List<String> words) {
+	private static Map<String, Long> challenge4(List<String> words) {
 		return words.stream().collect(Collectors.groupingBy(word -> word, Collectors.counting()));
 	}
 	
@@ -54,6 +54,6 @@ public class Stream {
 		System.out.println(challenge3_2(nums));
 		
 		words = List.of("apple", "banana", "pear", "apple", "banana", "banana");
-		System.out.println(challenge5(words));
+		System.out.println(challenge4(words));
 	}
 }
