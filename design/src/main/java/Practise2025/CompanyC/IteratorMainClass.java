@@ -3,6 +3,33 @@ package Practise2025.CompanyC;
 import java.util.*;
 
 
+/*
+Level 1:
+Write an alternate iterator for list of lists. Similar to ZigZag Iterator on leetcode but you can have not just 2 but 'n' lists within the list;
+https://leetcode.com/problems/zigzag-iterator/description/
+
+Example :
+lists = [[0, 1, 2], [], [3, 4], [5]]
+output should be 0, 3, 5, 1, 4, 2
+
+Level 2:
+Write a range iterator. Should support negative step as well.
+Example :
+start = 0
+end = 10
+step = 2
+output should be [0, 2, 4, 6, 8, 10]
+
+Level 3:
+Write a basic list iterator
+list = [0, 1, 2, 3, 4, 5]
+output should be 0, 1, 2, 3, 4, 5
+
+Level 4:
+Modify the class written in level1 to take list of iterator objects instead of lists and print the numbers in alternate fashion. The iterators list can contain both range iterator and list iterator.
+ */
+
+
 interface Iterator{
 	public int next();
 	public boolean hasNext();
