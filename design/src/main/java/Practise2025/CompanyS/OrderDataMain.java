@@ -1,6 +1,7 @@
 package Practise2025.CompanyS;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /*
 
@@ -107,16 +108,17 @@ class OrderDao{
 		return true;
 	}
 	
-//	public Set<Order> filterBy(Set<Order> inputOrderSet){
-//		HashSet<Order> afterFilterSet = new HashSet<>();
-//		for(Order order: inputOrderSet) {
-//			if()
-//		}
-//	}
+	public Set<Order> filterBy(String userid){
+		return orderSet.stream().filter(a -> a.userId.equals(userid)).collect(Collectors.toSet());
+	}
 }
 
 public class OrderDataMain {
 	public static void main(String[] args) {
-		
+		OrderDao dao = new OrderDao();
+		dao.addOrder(new Order("1", "Bike", "1"));
+		dao.addOrder(new Order("2", "Glass", "1"));
+		dao.addOrder(new Order("3", "Almonds", "2"));
+		System.out.println(dao.filterBy("1"));
 	}
 }
