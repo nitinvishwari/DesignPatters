@@ -146,7 +146,12 @@ public class RandomSelection {
 		TreeBuilder treeBuilder = new TreeBuilder();
 
 		System.out.println(treeBuilder.randomObjects(colorList, lengthList, 6));
-		System.out.println(treeBuilder.randomUniqueObjects(colorList, lengthList, 5));
+		try {
+			System.out.println(treeBuilder.randomUniqueObjects(colorList, lengthList, 10));
+		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
 		
 		List<Integer> colorWeigths = List.of(1, 100, 100);
 		List<Integer> lengthWeights = List.of(1, 10, 100);
